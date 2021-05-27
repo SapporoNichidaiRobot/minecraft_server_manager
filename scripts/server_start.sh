@@ -9,4 +9,4 @@ if [ $# -ne 1 ]; then
 fi
 
 cd "$ORG_PATH/servers/$1" || exit 1
-java -Xms$MIN_RAM -Xmx$MAX_RAM -jar server.jar nogui
+screen -dmS "$1" java -Xms$MIN_RAM -Xmx$MAX_RAM -jar server.jar nogui
