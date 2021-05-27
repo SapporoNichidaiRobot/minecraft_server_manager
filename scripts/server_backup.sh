@@ -6,7 +6,7 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-find $ORG_PATH/archives/$1 -type f -daystart -mtime +6 |xargs /bin/rm -f
+find $ORG_PATH/archives/$1 -type f -daystart -mtime +2 |xargs /bin/rm -f
 
 # ファイル名を定義
 filename='backup.tar.gz'
